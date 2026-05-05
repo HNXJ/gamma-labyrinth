@@ -139,7 +139,25 @@
     "pass_1_windows_shell": "candidate_created",
     "pass_2_office_mac_lms": "complete",
     "pass_3_windows_front_validation": "complete",
-    "pass_4_integration_smoke": "pending"
+    "pass_4_integration_smoke": "complete"
+  },
+  "integration_smoke": {
+    "validated_from_windows": true,
+    "validated_at": "2026-05-05T16:05:00Z",
+    "lms_models_endpoint_reachable": true,
+    "lms_model_count": 27,
+    "front_local_url": "http://localhost:5173/",
+    "front_build_passed": true,
+    "front_browser_validation_passed": true,
+    "gamma_backend_compile_passed": true,
+    "truth_mode": "truth_safe_unverified",
+    "truth_bearing_run": false,
+    "notes": [
+      "Smoke test validates integration readiness only.",
+      "No scientific truth state was created or mutated.",
+      "Final freeze still requires gamma task branch pin/merge decision.",
+      "LMS requires token sk-lm-... (Bearer auth verified)."
+    ]
   },
   "scientific_truth": {
     "active_truth_claims": "none",

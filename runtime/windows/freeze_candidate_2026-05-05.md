@@ -17,13 +17,14 @@
 ## Resolved Blockers
 - **Office Mac LMS**: Verified at `http://100.69.184.42:1234/v1/models` from Windows. 27 models available.
 - **Windows Front Validation**: `gamma-arena` build and lint passed. Local dev server verified at `http://localhost:5173/`. UI branding and truth-safety disclaimers confirmed.
+- **Integration Smoke Test**: Pass 4 complete. End-to-end connectivity (LMS + Front + Backend compile) verified from Windows.
 
 ## Tag/Branch Proposal
 - **Branch**: `runtime/windows-stable`
 - **Tag**: `windows-runtime-v0.1`
 
 ## Status
-**No tag or branch has been created.** This is a freeze candidate for Pass 1 verification.
+**No tag or branch has been created.** This is a freeze candidate for Pass 1-4 verification.
 
 ## Next Pass
-Proceed to **Pass 4: Full integration smoke test**.
+Run **DELTA freeze decision** for `gamma` task branch and then create/push `runtime/windows-stable` or tag only after approval.
