@@ -13,10 +13,10 @@
 
 ## Unresolved Blockers
 - **Gamma Branch**: `gamma` is on a task branch (`task/tutorial-01-n4-seed`). A decision is required to either merge or pin this branch for the stable runtime.
-- **Security**: LMS credential rotation required before freeze/tag/push.
 
 ## Resolved Blockers
-- **Office Mac LMS**: Verified at `http://100.69.184.42:1234/v1/models` from Windows. 27 models available.
+- **Office Mac LMS**: Verified at `http://100.69.184.42:1234/v1/models` and via no-auth POST from Windows. 27 models available. No credential is required, printed, stored, or committed.
+- **Security**: LMS auth requirement resolved for local Tailscale-only no-auth smoke.
 - **Windows Front Validation**: `gamma-arena` build and lint passed. Local dev server verified at `http://localhost:5173/`. UI branding and truth-safety disclaimers confirmed.
 - **Integration Smoke Test**: Pass 4 complete. End-to-end connectivity (LMS + Front + Backend compile) verified from Windows.
 
