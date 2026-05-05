@@ -12,8 +12,10 @@
 | hnxj.github.io | main | b53982e | ready_to_pin |
 
 ## Unresolved Blockers
-- **Office Mac LMS**: Alias `office-mac-gamma-llm` did not resolve. Active peer `100.120.174.20` ports 22/1234 are closed.
 - **Gamma Branch**: `gamma` is on a task branch (`task/tutorial-01-n4-seed`). A decision is required to either merge or pin this branch for the stable runtime.
+
+## Resolved Blockers
+- **Office Mac LMS**: Verified at `http://100.69.184.42:1234/v1/models` from Windows. 27 models available.
 
 ## Tag/Branch Proposal
 - **Branch**: `runtime/windows-stable`
@@ -23,4 +25,4 @@
 **No tag or branch has been created.** This is a freeze candidate for Pass 1 verification.
 
 ## Next Pass
-Proceed to **Pass 2: Office Mac LMS-only endpoint setup**.
+Proceed to **Pass 3: Windows front visual validation**.

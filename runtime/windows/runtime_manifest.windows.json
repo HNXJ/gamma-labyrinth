@@ -10,14 +10,46 @@
   },
   "model_host": {
     "role": "office_mac_lm_studio_model_host_only",
-    "status": "unresolved",
-    "tailscale_host_or_ip": null,
-    "lm_studio_base_url": null,
-    "models_endpoint": null,
+    "status": "resolved",
+    "tailscale_host_or_ip": "100.69.184.42",
+    "lm_studio_base_url": "http://100.69.184.42:1234",
+    "models_endpoint": "http://100.69.184.42:1234/v1/models",
+    "model_ids": [
+      "gpt-oss-20b",
+      "gpt-oss-20b:2",
+      "gpt-oss-20b:3",
+      "gpt-oss-20b:4",
+      "gpt-oss-20b:5",
+      "gpt-oss-20b:6",
+      "gemma-4-26b-a4b-heretic-mlx",
+      "gemma-4-e4b-it-mxfp8",
+      "llama-3.3-70b-instruct-ram-50gb-mlx",
+      "granite-4.0-h-small-mlx",
+      "allenai/olmo-3-32b-think",
+      "gemma-4-31b",
+      "ministral-3-14b-instruct-2512-mxfp8",
+      "gemma-4-31b-it",
+      "gpt-oss-safeguard-120b-mlx",
+      "qwen3-14b-gemini-3-pro-preview-high-reasoning-distill-qx86-hi-mlx",
+      "qwen3-14b-claude-4.5-opus-high-reasoning-distill-qx86-hi-mlx",
+      "phi-4-reasoning-plus",
+      "gemma-4-31b-it-mxfp8-mlx",
+      "qwen3.5-vl-4b-mlx-crack",
+      "nemotron-3-nano-30b",
+      "gpt-oss-20b-claude-4.5",
+      "qwen3.5-40b-claude-4.5-opus",
+      "mistral-nemo-12b-thinking",
+      "gemma-3-27b-it",
+      "text-embedding-nomic-embed-text-v2-moe",
+      "text-embedding-nomic-embed-text-v1.5"
+    ],
+    "verified_from_windows": true,
+    "verified_at": "2026-05-05T15:45:00Z",
     "notes": [
       "Office Mac Tailscale alias office-mac-gamma-llm did not resolve during readiness audit.",
       "Active Tailscale peer 100.120.174.20 pinged but SSH and LM Studio ports failed.",
-      "Pass 2 must resolve LMS endpoint before live model-integrated runtime."
+      "LM Studio local-network exposure was enabled manually by Hamm.",
+      "Pass 2 verified reachability from Windows over Tailscale."
     ]
   },
   "repos": [
@@ -95,7 +127,7 @@
   },
   "runtime_status": {
     "pass_1_windows_shell": "candidate_created",
-    "pass_2_office_mac_lms": "pending",
+    "pass_2_office_mac_lms": "complete",
     "pass_3_windows_front_validation": "pending",
     "pass_4_integration_smoke": "pending"
   },
