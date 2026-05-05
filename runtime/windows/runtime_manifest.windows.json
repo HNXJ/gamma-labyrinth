@@ -152,11 +152,22 @@
     "gamma_backend_compile_passed": true,
     "truth_mode": "truth_safe_unverified",
     "truth_bearing_run": false,
+    "lms_auth": {
+      "auth_required": true,
+      "credential_source": "local_runtime_environment",
+      "credential_value_recorded": false,
+      "credential_rotation_required": true,
+      "notes": [
+        "Pass 4 showed LMS Bearer auth is required.",
+        "Credential value must not be stored in repo files, reports, prompts, or shell history.",
+        "Token rotation is required before the next authenticated LMS smoke test because a credential was exposed in a prior transcript."
+      ]
+    },
     "notes": [
       "Smoke test validates integration readiness only.",
       "No scientific truth state was created or mutated.",
       "Final freeze still requires gamma task branch pin/merge decision.",
-      "LMS requires token sk-lm-... (Bearer auth verified)."
+      "LMS Bearer auth is required; credential value was not retained in the runtime manifest."
     ]
   },
   "scientific_truth": {
