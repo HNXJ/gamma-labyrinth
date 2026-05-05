@@ -16,6 +16,7 @@
 
 ## Resolved Blockers
 - **Office Mac LMS**: Verified at `http://100.69.184.42:1234/v1/models` from Windows. 27 models available.
+- **Windows Front Validation**: `gamma-arena` build and lint passed. Local dev server verified at `http://localhost:5173/`. UI branding and truth-safety disclaimers confirmed.
 
 ## Tag/Branch Proposal
 - **Branch**: `runtime/windows-stable`
@@ -25,4 +26,4 @@
 **No tag or branch has been created.** This is a freeze candidate for Pass 1 verification.
 
 ## Next Pass
-Proceed to **Pass 3: Windows front visual validation**.
+Proceed to **Pass 4: Full integration smoke test**.
