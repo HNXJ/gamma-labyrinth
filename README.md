@@ -25,3 +25,7 @@ Local/private workspace context is intentionally excluded from this public skele
 
 ## Ignore Rules
 This repository ignores `.DS_Store`, `*.npy`, `*.mat`, and `*.html`.
+
+## Coordination
+
+This repository follows the [GAMMA-BUS Coordination Doctrine](GEMINI.md). Agents should refer to `GEMINI.md` for specific instructions and coordination rules.
