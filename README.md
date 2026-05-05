@@ -1,7 +1,7 @@
 # gamma-labyrinth
 
 ## Role in Gamma Labyrinth
-Top-level skeleton/world front door. Orientation, repo map, mission entrypoints, onboarding, source markdown aggregation.
+top-level skeleton/world front door; not runtime, not truth storage, not UI.
 
 ## Plane Classification
 World Plane.
