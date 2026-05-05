@@ -1,0 +1,108 @@
+{
+  "schema": "gamma_labyrinth_windows_runtime_manifest_v0_1",
+  "created_at": "2026-05-05T15:35:00Z",
+  "truth_mode": "truth_safe_unverified",
+  "runtime_host": {
+    "role": "windows_primary_runtime_and_front_host",
+    "hostname": "ASBL-BASTOSI9",
+    "workspace_root": "D:\\workspace\\gemini-gamma-labyrinth",
+    "repos_root": "D:\\workspace\\gemini-gamma-labyrinth\\repos"
+  },
+  "model_host": {
+    "role": "office_mac_lm_studio_model_host_only",
+    "status": "unresolved",
+    "tailscale_host_or_ip": null,
+    "lm_studio_base_url": null,
+    "models_endpoint": null,
+    "notes": [
+      "Office Mac Tailscale alias office-mac-gamma-llm did not resolve during readiness audit.",
+      "Active Tailscale peer 100.120.174.20 pinged but SSH and LM Studio ports failed.",
+      "Pass 2 must resolve LMS endpoint before live model-integrated runtime."
+    ]
+  },
+  "repos": [
+    {
+      "name": "gamma-labyrinth",
+      "role": "world_shell_control_front_door",
+      "path": "D:\\workspace\\gemini-gamma-labyrinth\\repos\\gamma-labyrinth",
+      "branch": "main",
+      "head": "d0b6286",
+      "dirty": false,
+      "freeze_classification": "ready_to_pin"
+    },
+    {
+      "name": "gamma-protocol",
+      "role": "markdown_only_doctrine",
+      "path": "D:\\workspace\\gemini-gamma-labyrinth\\repos\\gamma-protocol",
+      "branch": "master",
+      "head": "2e9fe8f",
+      "dirty": false,
+      "freeze_classification": "ready_to_pin"
+    },
+    {
+      "name": "gamma",
+      "role": "execution_truth_receipts_harnesses",
+      "path": "D:\\workspace\\gemini-gamma-labyrinth\\repos\\gamma",
+      "branch": "task/tutorial-01-n4-seed",
+      "head": "9551616",
+      "dirty": false,
+      "freeze_classification": "pin_decision_required_task_branch"
+    },
+    {
+      "name": "gamma-arena",
+      "role": "observation_front_browser_validation",
+      "path": "D:\\workspace\\gemini-gamma-labyrinth\\repos\\gamma-arena",
+      "branch": "main",
+      "head": "ac2f1b7",
+      "dirty": false,
+      "freeze_classification": "ready_to_pin"
+    },
+    {
+      "name": "gamma-analysis",
+      "role": "derived_analysis_reports",
+      "path": "D:\\workspace\\gemini-gamma-labyrinth\\repos\\gamma-analysis",
+      "branch": "main",
+      "head": "a6be70f",
+      "dirty": false,
+      "freeze_classification": "ready_to_pin"
+    },
+    {
+      "name": "gamma-science",
+      "role": "scientific_source_grounding",
+      "path": "D:\\workspace\\gemini-gamma-labyrinth\\repos\\gamma-science",
+      "branch": "main",
+      "head": "6d2b0b1",
+      "dirty": false,
+      "freeze_classification": "ready_to_pin"
+    },
+    {
+      "name": "hnxj.github.io",
+      "role": "public_observation_surface",
+      "path": "D:\\workspace\\gemini-gamma-labyrinth\\repos\\hnxj.github.io",
+      "branch": "main",
+      "head": "b53982e",
+      "dirty": false,
+      "freeze_classification": "ready_to_pin"
+    }
+  ],
+  "freeze_candidate": {
+    "name": "windows-runtime-v0.1-candidate",
+    "branch_proposal": "runtime/windows-stable",
+    "tag_proposal": "windows-runtime-v0.1",
+    "tag_created": false,
+    "branch_created": false,
+    "reason": "Freeze candidate only. No tag or branch created until LMS endpoint and gamma branch decision are resolved."
+  },
+  "runtime_status": {
+    "pass_1_windows_shell": "candidate_created",
+    "pass_2_office_mac_lms": "pending",
+    "pass_3_windows_front_validation": "pending",
+    "pass_4_integration_smoke": "pending"
+  },
+  "scientific_truth": {
+    "active_truth_claims": "none",
+    "active_neuron_count": null,
+    "accepted_model_state": null,
+    "receipt_required_for_truth": true
+  }
+}
