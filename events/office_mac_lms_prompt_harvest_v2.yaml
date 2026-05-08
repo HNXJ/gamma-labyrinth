@@ -1,0 +1,54 @@
+event_definition:
+  event_id: office_mac_lms_prompt_harvest_v2
+  event_name: Office Mac LMS Prompt Harvest, Explicit Composition
+  event_type: office_mac_lms_prompt_harvest
+  plane: Control
+  truth_mode: truth_safe_unverified
+  truth_bearing_run: false
+
+  purpose:
+    one_sentence: Harvest 10 full player prompt envelopes from Office Mac LMS sessions.
+    scientific_or_control_goal: Determine whether player prompts use explicit A/P/B composition and whether prompt logs are sufficient for drift and truth-safety analysis.
+
+  composition:
+    components_used: [A, P, B]
+    order: A_plus_P_plus_B
+    static_or_dynamic: dynamic_recursive
+    minimality_reason: A gives the harvest objective, P carries current log/session state, and B enforces safety/redaction/output format.
+    legacy_status: replaces_implicit_procedural_prompting
+
+  components:
+    A: |
+      Role: log-harvest auditor.
+      Problem: Office Mac LMS player sessions are running, but we need exact prompt envelopes.
+      Objective: find up to 10 full prompts/responses/judge states from the latest safe player session.
+      How: inspect known runtime artifact paths read-only, classify each turn, and report prompt composition.
+
+    P0: |
+      Known latest evidence: a 5-turn mock_transport Office Mac LMS session was found under runtime_artifacts/gamma/office_mac_lms_sessions. It contains prompt_text_redacted, response_text_redacted, truth_mode, timestamps, and transcript.jsonl. It does not yet prove 10 prompts or explicit A+P+B composition.
+
+    B: |
+      Rules: read-only; no edits, commits, pushes, deletes, live model calls, or truth mutation. Do not print secrets. Redact credentials. Do not call mock output live evidence.
+      Required output: identify latest candidate session; extract up to 10 prompt envelopes; classify composition as A+P+B, B+P+A, implicit_procedural, or unknown; report file paths, sizes, hashes, turn count, mock/live status, and redaction status.
+      Verdict must be one of PROMPT_LOG_10_FOUND_READY_FOR_ANALYSIS, PROMPT_LOG_PARTIAL_FOUND, PROMPT_LOG_NOT_FOUND_TRANSCRIPT_ONLY, PROMPT_LOG_ACCESS_BLOCKED_BY_AUTH, PROMPT_LOG_BLOCKED_BY_SECRET_RISK.
+
+  turn_rule:
+    prompt_n: A + P(n) + B
+    state_update: P(n+1) = harvested_file_state + prompt_envelope_classification + judge/verdict
+    stop_after: 10 prompt envelopes found or search exhausted
+
+  output_contract:
+    required_sections:
+      - directories_inspected
+      - latest_session_candidate
+      - prompt_envelopes
+      - composition_classification
+      - file_hashes
+      - verdict
+    required_evidence:
+      - source_file_path
+      - sha256
+      - prompt_text_redacted
+      - response_text_redacted
+      - truth_mode
+      - mock_transport
