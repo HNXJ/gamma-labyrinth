@@ -1,16 +1,14 @@
-import os
+"""Compatibility launcher for the local Gamma Labyrinth control server."""
+
 import sys
 from pathlib import Path
 
-# Resolve workspace root: assuming repository structure of repos/
-# D:\workspace\gemini-gamma-labyrinth\repos\gamma-labyrinth -> D:\workspace\gemini-gamma-labyrinth
-repo_root = Path(__file__).resolve().parent.parent
-workspace_root = repo_root.parent
-gamma_src = repo_root / "gamma" / "src"
+repo_root = Path(__file__).resolve().parent
+src_root = repo_root / "src"
+if str(src_root) not in sys.path:
+    sys.path.insert(0, str(src_root))
 
-sys.path.insert(0, str(gamma_src))
-
-from gamma_runtime.launcher import main
+from gamma_labyrinth.server import main
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
